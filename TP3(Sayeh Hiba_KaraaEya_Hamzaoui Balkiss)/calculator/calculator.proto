@@ -1,0 +1,24 @@
+syntax="proto3";
+
+package calculatorPackage;
+
+
+service Calculator {
+
+    rpc Addition(Params) returns (ResultParam);
+    rpc Subtraction(Params) returns (ResultParam);
+    rpc Multiplication(Params) returns (ResultParam);
+    rpc Division(Params) returns (ResultParam);
+
+ }
+
+
+ message Params{
+     double First=1;
+     double Second=2;
+  }
+
+
+ message ResultParam{
+      double result=1;
+ }
